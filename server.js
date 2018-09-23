@@ -2,6 +2,7 @@ const express = require('express'); //#1
 const hbs = require('hbs');
 const fs = require('fs');
 
+const port = process.env.PORT || 3000;
 var app = express(); //#2
 
 var maintenance = false;
@@ -63,8 +64,8 @@ app.get('/bad', (req, res) => {
     });
 });
 
-app.listen(3000, () => {
-    console.log('server is up on port 3000')
+app.listen(port, () => {
+    console.log(`server is up on port ${port}`);
 }); //developing locally .. #4
 
 //this allows you to serve up a directory in 4 lines above
