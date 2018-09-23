@@ -1,0 +1,15 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Some Website</title> 
+    </head>
+    <body>
+        {{> header}}
+        {{!-- You call <Method> <Arguments>... --}}
+        <p>{{screamIt welcomeMessage}}</p> 
+        <p>{{name}} likes {{likes}}</p>
+        {{!-- This is a partial --}}
+        {{> footer}} 
+    </body>
+</html>
